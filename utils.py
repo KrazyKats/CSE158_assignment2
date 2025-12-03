@@ -174,6 +174,8 @@ def naive_jaccard_model(dataset_folder_path):
             if (np.mean([genre_jaccard, tag_jaccard, specs_jaccard])
                 >= jaccard_similarity_threshold):
                 user_bundle_match[user].append(bundle)
+                print("WE GOT A MATCH")
+                
 
     data_cleaning_stats = (missing_genres_count, missing_tags_count,
                               missing_specs_count, missing_id_count, rep_items)
@@ -217,3 +219,6 @@ def evaluation_function_naive(test_tuple_list, user_bundle_match = None):
     res_acc = evaluation_function(test_tuple_list, user_bundle_match)
 
     return res_acc
+
+def test_new():
+    print("reloaded")
